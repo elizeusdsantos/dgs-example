@@ -1,0 +1,9 @@
+type Query {
+  companies(companyName: String): [Company]
+}
+
+type Company {
+  company_name: String
+  domain: String
+  year_founded: int
+}
