@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  mysql:
+    image: mysql:8
+    ports:
+      - 3306:3306
+    volumes:
+      - my-datavolume:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "s3cr3t"
+      MYSQL_PASSWORD: "apps3cr3t"
+      MYSQL_USER: "app_user"
+      MYSQL_DATABASE: "dgs_example_db"
+volumes:
+  my-datavolume:
