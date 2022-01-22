@@ -3,7 +3,7 @@ type Query {
 }
 
 type Company {
-  company_name: String
+  companyName: String
   domain: String
-  year_founded: Int
+  yearFounded: Int
 }
