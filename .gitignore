@@ -8,3 +8,4 @@ bin/
 
 ### VS Code ###
 .vscode/
+.idea/

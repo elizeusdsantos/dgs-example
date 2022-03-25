@@ -1,9 +1,9 @@
 type Query {
-  getCompanies(companyName: String): [Company]
+    getCompanies(companyName: String): [Company]
 }
 
 type Company {
-  companyName: String
-  domain: String
-  yearFounded: Int
+    companyName: String
+    domain: String
+    yearFounded: Int
 }
