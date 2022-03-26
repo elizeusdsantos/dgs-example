@@ -1,16 +1,16 @@
-version: '3.9'
+version: '3.8'
 
 services:
-  mysql:
-    image: mysql:8
-    ports:
-      - 3306:3306
-    volumes:
-      - my-datavolume:/var/lib/mysql
+  postgresql:
+    image: postgres:14.2
+    restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: "s3cr3t"
-      MYSQL_PASSWORD: "apps3cr3t"
-      MYSQL_USER: "app_user"
-      MYSQL_DATABASE: "dgs_example_db"
+      POSTGRES_USER: mypguser
+      POSTGRES_PASSWORD: mypgpass
+      POSTGRES_DB: dgs-example-db
+    ports:
+      - '5432:5432'
+    volumes:
+      - db:/var/lib/postgresql/data
 volumes:
-  my-datavolume:
+  db:

@@ -3,6 +3,6 @@ spring:
     init:
       mode: always
   datasource:
-    url: jdbc:mysql://localhost:3306/dgs_example_db
-    username: app_user
-    password: apps3cr3t
+    url: jdbc:postgresql://localhost:5432/dgs-example-db
+    username: mypguser
+    password: mypgpass
